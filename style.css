@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    height: 100px;
+
+    background-color: white;
+    transform: translateX(-50%);
+    padding: 20px;
+    
+}
+.container {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 60px;
+}
+.request {
+    border: 3px solid #FF055F;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.fa-solid {
+}
+.fa-clipboard {
+    color: #FF055F;
+}
+.request__text {
+    color: #FF055F;
+    text-align: right;
+}
+.request__text::before {
+    content: "Leave a Request";
+}
+
+.request::before {
+    content: url(img/icons/list.svg);
+
+}
+
+    
+
+
+.toggler {
+    width: 250px;
+    margin: auto;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    right: 350px;
+    opacity: 0;
+    z-index: 10;
+}
+
+.screen {
+    width: 100%;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.80);
+    top: 0;
+    left: 0;
+    position: absolute;
+    backdrop-filter: blur(2px);
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+.toggler:checked ~ .container .request__text::before {
+    content: "Close";
+}
+
+
+.toggler:checked ~ .screen {
+    height: 100vh;
+}
+
+.toggler:checked ~ .container .request::before {
+    content: url(img/icons/cross.svg);
+}
+
+.nav__form {
+    width: 750px;
+    height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 200px;
+    transition: 1s;
+    position: absolute;
+}
+.form__title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.form__input {
+    border-radius: 20px;
+    background-color: #EAEAEA;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 550px;
+    margin-bottom: 60px;
+
+}
+
+.form__input::placeholder {
+    color: black;
+
+}
+.form__submit {
+    border-radius: 20px;
+    width: 300px;
+    color: white;
+    background-color: #0BB6FF;
+    padding: 30px 120px;
+    border: none;
+    transition: 1s;
+}
+
+.form__submit:hover {
+    background-color: rgba(11, 182, 255, 0.60);
+}
+
+.form__submit:active {
+    background-color: black;
+}
