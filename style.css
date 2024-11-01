@@ -12,12 +12,11 @@ body {
     width: 100%;
     position: fixed;
     top: 0px;
-    left: 50%;
+    left: 0%;
     height: 100px;
+    padding: 20px;
 
     background-color: white;
-    transform: translateX(-50%);
-    padding: 20px;
     
 }
 .container {
@@ -158,6 +157,8 @@ body {
 
 .nav__border {
     height: 2px;
-    width: 100%;
-    background-image: linear-gradient(#0BB6FF, #FF045F);
+    width: 90%;
+    background-image: linear-gradient(90deg, #0BB6FF, #FF045F);
+    border: none;
+    margin-top: 20px;
 }
